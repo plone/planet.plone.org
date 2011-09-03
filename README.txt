@@ -14,7 +14,8 @@ You've already got planet.plone.org up and running?  Great, add a feed to
 "feeds.cfg", then run:
 
 1. sudo bin/buildout
-2. sudo -u apache /bin/sh bin/update.sh (or just wait 10 minutes)
+2. sudo chown -R apache parts var
+3. sudo -u apache /bin/sh bin/update.sh (or just wait 10 minutes)
 
 Don't have planet.plone.org up and running yet?  Read below.
 
@@ -29,7 +30,7 @@ To deploy planet.plone.org:
 3. cd planet.plone.org
 4. sudo python bootstrap.py -d
 5. sudo bin/buildout
-6. sudo chown -R apache var
+6. sudo chown -R apache parts var
 7. install -o root -g root -m 644 /var/www/planet.plone.org/var/crontab /etc/cron.d/planet
 8. sudo /etc/init.d/apache2 restart
 
@@ -52,7 +53,7 @@ I've tested it on Python 2.6 (on Mac OS X) and Python 2.7 (on Gentoo 1.12.14).
 *Note*: If you're on Mac OS X, make sure you use a Python with the ``bsddb``
 module enabled.  The system Python does *not* support ``bsddb``.
 
-It also requires libxml2/libxslt be preset on the system in the usual
+It also requires libxml2/libxslt be present on the system in the usual
 locations.  Naturally, it requires an active internet connection in order to
 download eggs during configuration and to download feeds during operation.
 
@@ -104,11 +105,11 @@ The details steps are as follows:
 
         sudo bin/buildout
 
-5.  Change ownership of the ``var`` subdirectory to the "apache" user (or
-    whatever user is specified in the ``venus-user`` property in the
+5.  Change ownership of the ``parts`` & ``var`` subdirectories to the "apache"
+    user (or whatever user is specified in the ``venus-user`` property in the
     ``[buildout]`` section of the "buildout.cfg" file)::
 
-        sudo chown -R apache var
+        sudo chown -R apache parts var
 
 6.  Install the generated crontab file into "/etc/cron.d" so that the Planet
     Venus feeds are updated every 10 minutes::
