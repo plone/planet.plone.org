@@ -1,0 +1,7 @@
+# ♀ Planet Venus for Plone — Crontab
+# ==================================
+#
+# N.B.: etc/crontab.in generates var/crontab.
+#
+MAILTO=${buildout:admin-email}
+*/10 * * * * ${buildout:venus-user} ${buildout:bin-directory}/update.sh >/dev/null 2>&1

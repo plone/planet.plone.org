@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/">
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>
+			$feed.config.name
+		</title>
+		<link rel="alternate" type="application/rss+xml" href="http://feeds.plone.org/ploneblogs" title="Plone Blogs" />
+		<link rel="stylesheet" href="http://plone.org/plone.css" type="text/css" media="screen" charset="utf-8" />
+		<base href="http://plone.org/" />
+	</head>
+	<body>
+		<div id="outer-wrapper">
+			<div id="inner-wrapper">
+				<div id="nav">
+					<form id="search" name="searchform" action="http://plone.org/search">
+						<input id="search-site" name="SearchableText" type="search" title="Search this site…" accesskey="4" class="inputLabel" size="15" />
+					</form>
+					<div id="user">
+						<a href="http://plone.org/login">Log in</a>
+					</div>
+					<ul id="main-nav" class="navigation">
+						<li id="portaltab-index_html" class="plain"><a href="http://plone.org" title="">Home</a></li><li id="portaltab-products" class="plain"><a href="http://plone.org/products" title="Plone releases and available add-on products for Plone. Make sure you have Plone installed before downloading the add-ons — and make sure you are using add-ons that have been certified for use with your particular version.">Downloads</a></li><li id="portaltab-documentation" class="plain"><a href="http://plone.org/documentation" title="The primary source for Plone documentation.">Documentation</a></li><li id="portaltab-contribute" class="plain"><a href="http://plone.org/contribute" title="Contains all developer-related material.">Get Involved</a></li><li id="portaltab-foundation" class="plain"><a href="http://plone.org/foundation" title="The Plone Foundation exists to further the development, marketing, and legal affairs of Plone and the Plone community.">Plone Foundation</a></li><li id="portaltab-support" class="plain"><a href="http://plone.org/support" title="Contact details for the Plone project.">Support</a></li>
+					</ul>
+				</div>
+				<div id="content-wrapper">
+					<div class="grid-row">
+						<div class="grid-cell position-leftmost width-two-thirds">
+							<div id="region-content" class="documentContent">
+								<div id="content">
+									<h1 class="documentFirstHeading">
+										$feed.config.name
+									</h1>
+									<p class="documentDescription">
+									This is where developers and integrators write about Plone, and is your best source for
+									news and developments from the community.
+									</p>
+
+
+									<py:for each="entry in entries">
+									<div class="channelgroup" py:strip="not entry.new_date">
+										<h2 py:if="entry.new_date">$entry.new_date</h2>
+
+										<div class="entrygroup" py:strip="not entry.new_feed">
+											<h3 py:if="entry.new_feed">
+												<a class="link-plain" href="$entry.link" title="$entry.source.title">$entry.source.config.name:
+												<span py:if="entry.title" lang="$entry.title_detail.language">
+													$entry.title_detail.stream
+												</span>
+												</a>
+											</h3>
+
+											<p class="discreet">
+												<py:if test="entry.author_detail and entry.author_detail.name">
+												by $entry.author_detail.name at </py:if> $entry.updated
+											</p>
+
+											<div class="entry">
+												<div class="tileBody" py:choose="">
+													<py:when test="entry.content">${entry.content[0].stream}</py:when>
+													<py:when test="entry.summary_detail">${entry.summary_detail.stream}</py:when>
+												</div>
+											</div>
+										</div>
+									</div>
+									</py:for>
+
+
+								</div><span id="contentBottomLeft"></span><span id="contentBottomRight"></span>
+							</div>
+						</div><!-- End cell -->
+						<div class="grid-cell position-two-thirds width-third">
+							<div id="sidebar">
+								<div class="visualPadding">
+									<div id="portletwrapper-706c6f6e652e6c656674636f6c756d6e0a636f6e74656e745f747970650a48656c7043656e746572486f77546f0a706f72746c65745f7068635f61626f7574" class="portletWrapper kssattr-portlethash-706c6f6e652e6c656674636f6c756d6e0a636f6e74656e745f747970650a48656c7043656e746572486f77546f0a706f72746c65745f7068635f61626f7574">
+										<div>
+											<dl class="portlet">
+												<dt class="portletHeader">
+													About
+												</dt>
+												<dd class="portletItem">
+													<p>Last updated: $feed.updated</p>
+													<p>To subscribe to this feed in the reader of your choice, 
+														<a href="http://feeds.plone.org/ploneblogs">click here</a>.
+													</p>
+													<p>To have your Plone-centric blog added to
+														Planet Plone, please file an issue in the
+														plone.org <a href="http://dev.plone.org/plone.org">issue
+														tracker.</a>
+													</p>
+												</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- End row -->
+				</div>
+				<div style="clear:both"></div>
+			</div><!-- end inner-wrapper -->
+		</div><!-- end outer-wrapper -->
+	</body>
+</html>

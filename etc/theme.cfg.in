@@ -1,0 +1,26 @@
+# ♀ Planet Venus for Plone — Theme Configuration
+# ==============================================
+#
+# Adapted from the original Plone theme on deus.plone.org.
+#
+# —Sean Kelly, kelly@seankelly.biz, Plone AI Team
+
+
+[Planet]
+template_files:
+	atom.xml.xslt
+	foafroll.xml.xslt
+	index.html.genshi
+	opml.xml.xslt
+	rss10.xml.tmpl
+	rss20.xml.tmpl
+
+template_directories:
+	${venus:location}/themes/common
+	${venus:location}/themes/classic_fancy
+
+bill_of_materials:
+	plone-external.css
+	images/feed-icon-10x10.png
+	images/logo.png
+	images/venus.png
