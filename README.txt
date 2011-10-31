@@ -6,6 +6,10 @@ This is the buildout for `Planet Venus`_ (an RSS aggregator) for Plone_, the
 content management system.  This buildout provides the configuration for
 Planet Venus, normally served at http://planet.plone.org/.
 
+THESE INSRUCTIONS ARE PARTIALLY OUTDATED, FOLLOW ADMIN MANUAL:
+
+https://github.com/plone/ploneorg.admin
+
 
 Quickly Add a Feed
 ==================
