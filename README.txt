@@ -1,10 +1,19 @@
-**************************
+To add your feed
+================
+
+To add you feed:
+Please clone this repository and open an pull request. Merged changes will be deployed on the server automatically.
+
+
+
+
  ♀ Planet Venus for Plone
-**************************
+==========================
 
 This is the buildout for `Planet Venus`_ (an RSS aggregator) for Plone_, the
 content management system.  This buildout provides the configuration for
 Planet Venus, normally served at http://planet.plone.org/.
+
 
 THESE INSRUCTIONS ARE PARTIALLY OUTDATED, FOLLOW ADMIN MANUAL:
 
