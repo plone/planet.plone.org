@@ -1,8 +1,7 @@
 To add your feed
 ================
 
-To add you feed:
-Please clone this repository and open an pull request. Merged changes will be deployed on the server automatically.
+Please clone this repository and open a pull request. Merged changes will be deployed on the server automatically.
 
 
 
