@@ -4,4 +4,5 @@
 #
 # Run this as the Planet Venus user (on deus2, "apache") to update feeds.
 
+cd ${buildout:directory} && git pull
 exec ${buildout:bin-directory}/python ${venus:location}/planet.py "${:dollar}@" ${buildout:directory}/var/venus.cfg
