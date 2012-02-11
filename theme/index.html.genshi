@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="http://plone.org/plone.css" type="text/css" media="screen" charset="utf-8" />
 		<base href="http://plone.org/" />
 	</head>
-	<body>
+	<body id="planet-plone-index">
 		<div id="outer-wrapper">
 			<div id="inner-wrapper">
 				<div id="nav">
