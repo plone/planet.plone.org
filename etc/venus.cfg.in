@@ -16,3 +16,4 @@ output_theme    = ${buildout:directory}/theme
 output_dir      = ${buildout:htdocs-directory}
 cache_directory = ${buildout:directory}/var/cache
 items_per_page  = 15
+future_dates    = ignore_date
