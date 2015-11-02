@@ -1,10 +1,19 @@
 planet.plone.org
 ================
 
-This is the buildout for `Planet Venus <http://www.intertwingly.net/code/venus/>`_ (an RSS aggregator) for `Plone <https://plone.org>`_, the
-content management system.  This buildout provides the configuration for
 Planet Venus, normally served at http://planet.plone.org/.
 
+Features
+--------
+
+- ci tested
+- containerized [docker]
+
+
+Documentation
+-------------
+
+Full documentation for end users can be found in the "docs" folder.
 
 Contribute
 ----------
