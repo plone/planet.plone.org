@@ -12,4 +12,7 @@ Dependencies
 
 Please make sure that you have these add-ons installed !
 
+Setup
+-----
 
+If you initialize vagrant the, it will provision a shell script which installs all needed packages and will setup the planet.
