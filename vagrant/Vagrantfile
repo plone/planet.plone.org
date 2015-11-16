@@ -13,8 +13,6 @@ Vagrant.configure("2") do |config|
 
     config.vm.synced_folder "planet.plone.org/", "/srv/venus/planet.plone.org"
 
-    config.vm.provision "file", source: "~/.ssh/id_rsa.pub", destination: ".ssh/authorized_keys"
-
     config.vm.provider "virtualbox" do |vb|
         vb.customize ["modifyvm", :id, "--ioapic", "on"  ]
         vb.customize ["modifyvm", :id, "--cpus"  , "2"   ]
