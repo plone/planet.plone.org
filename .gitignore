@@ -1,2 +1,6 @@
+theme
 vagrant/.vagrant
 vagrant/planet-cache
+vagrant/planet.plone.org/public_html/*
+vagrant/planet.plone.org/planet-cache
+vagrant/planet.plone.org.bak/
