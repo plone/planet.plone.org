@@ -1,0 +1,32 @@
+<?xml version="1.0" ?><entry xmlns="http://www.w3.org/2005/Atom" xmlns:planet="http://planet.intertwingly.net/"><id>https://www.fourdigits.nl/blog/plone-api-1-3-3-released</id><link href="https://www.fourdigits.nl/blog/plone-api-1-3-3-released" rel="alternate" type="text/html"/><title>plone.api 1.3.3 released</title><summary>The plone.api is an elegant and simple API, built for humans wishing to develop with Plone.
+Version 1.3.3 simplifies client code even more with plone.api.content.find and default return values.
+plone.api is now Plone 5 compatible.</summary><content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><h2>What has changed in version 1.3.3?</h2>
+<h3>Documentation</h3>
+<p>The <a href="http://docs.plone.org/external/plone.api/docs/">documentation</a> has been cleaned and updated!</p>
+<h3>Plone 5 compatibility</h3>
+<p>plone.api is now compatible with Plone 5. This includes registry based mail settings.<br/>Note: The Plone 5 test setup uses plone.app.contenttypes instead of Archetypes.</p>
+<h3>Find content objects</h3>
+<p><a href="http://docs.plone.org/external/plone.api/docs/content.html#find-content-objects">plone.api.content.find</a> wraps the portal_catalog tool. It packs a bit of convenience that cleans up your code quite a bit.<br/>The 'context' argument is used to construct the 'path' query:</p>
+<pre># new<br/>find(context=context)<br/># old<br/>catalog(path='/'.join(context.getPhysicalPath()))</pre>
+<p>The interfaces' __identifier__ is automatically used for the 'object_provides' argument.</p>
+<pre># new<br/>find(object_provides=IContentish)<br/>find(object_provides=[IATDocument, IDexterityItem])<br/>or find(object_provides=IContentish.__identifier__)<br/># old <br/>catalog(object_provides=IContentish.__identifier__)<br/>catalog(object_provides=[IATDocument.__identifier__, IDexterityItem.__identifier__])</pre>
+<h3>Products.PrintingMailHost support</h3>
+<p>plone.api.portal.send_email no longer raises ValueError('MailHost is not configured.') when Products.PrintingMailHost is installed and active.</p>
+<h3>Support Zope users in env.adopt_user.</h3>
+<p><a href="http://docs.plone.org/external/plone.api/docs/env.html#switch-user-inside-a-block">plone.api.env.adopt_user</a>(username='zope_admin') now works as expected.</p>
+<h3>get_registry_record lists a subset of registry keys on error.</h3>
+<p><a href="http://docs.plone.org/external/plone.api/docs/portal.html#get-plone-app-registry-record">plone.api.portal.get_registry_record</a> no longer lists all registry keys. It now lists only keys that contain the passed in record name, instead of all 1500+ keys.</p>
+<h3>Revoking user roles</h3>
+<p>Fixed <a href="http://docs.plone.org/external/plone.api/docs/user.html#revoke-roles-from-user">revoke_roles</a> method: now if is't called with obj parameter, it doesn't set inherited roles locally.</p>
+<h3>Get View</h3>
+<p><a href="http://docs.plone.org/external/plone.api/docs/content.html#get-view">plone.api.content.get_view</a> no longer swallows exception. This means that get_view no longer raises InvalidParameterError when there's an error in the view's __init__.</p>
+<h3>Deleting multiple objects at once</h3>
+<p><a href="http://docs.plone.org/external/plone.api/docs/content.html#delete-content">plone.api.content.delete</a> now accepts a list of objects.</p>
+<h3>Products.Archetypes is o<span>ptional </span></h3>
+<p>plone.api now can be used without Products.Archetypes.</p>
+<h3>Default value for plone.api.content.get_state</h3>
+<p><a class="external-link" href="http://docs.plone.org/external/plone.api/docs/api/content.html#plone.api.content.get_state" target="_self" title="">plone.api.content.get_state</a> now allows for an optional default value. <span>This is used when no workflow is defined for the object.</span></p>
+<pre># new<br/>state = get_state(obj=context, default=None)<br/>if state is None:<br/>    # Do something<br/># old<br/>try:<br/>    state = get_state(obj=context)<br/>except WorkflowException:<br/>    # Do something </pre>
+<p> </p>
+<p>All commits: <a class="external-link" href="https://github.com/plone/plone.api/compare/1.3.2...1.3.3" target="_self" title="">https://github.com/plone/plone.api/compare/1.3.2...1.3.3</a><br/>Changelog: <a class="external-link" href="https://github.com/plone/plone.api/blob/1.3.3/docs/CHANGES.rst" target="_self" title="">https://github.com/plone/plone.api/blob/1.3.3/docs/CHANGES.rst</a></p>
+<p>A big thank you to cekk, jensens and pbauer for making this release possible!</p></div></content><rights>Copyright © 2005 - 2015 Four Digits</rights><updated planet:format="July 14, 2015 12:51 PM">2015-07-14T12:51:00Z</updated><author><name>Roel Bruggink</name></author><source><id>https://www.fourdigits.nl/blog</id><link href="https://www.fourdigits.nl/blog" rel="alternate" type="text/html"/><link href="https://www.fourdigits.nl/feeds/RSS" rel="self" type="application/rdf+xml"/><subtitle>Intelligente online oplossingen met het open source CMS Plone.</subtitle><title>Four Digits</title><updated planet:format="December 26, 2015 10:40 AM">2015-12-26T10:40:12Z</updated><planet:format>rss10</planet:format><planet:http_etag>&quot;||8724|nl|0|Sunburst Theme|&quot;</planet:http_etag><planet:nick>4d</planet:nick><planet:faceheight>85</planet:faceheight><planet:http_last_modified>Tue, 25 Nov 2014 08:20:44 GMT</planet:http_last_modified><planet:bozo>false</planet:bozo><planet:css-id>four-digits</planet:css-id><planet:items_per_page>60</planet:items_per_page><planet:face>4d.png</planet:face><planet:facewidth>85</planet:facewidth><planet:name>Four Digits</planet:name><planet:http_status>200</planet:http_status></source></entry>

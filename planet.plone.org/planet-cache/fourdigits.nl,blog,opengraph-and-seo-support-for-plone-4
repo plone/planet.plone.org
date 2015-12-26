@@ -1,0 +1,62 @@
+<?xml version="1.0" ?><entry xmlns="http://www.w3.org/2005/Atom" xmlns:planet="http://planet.intertwingly.net/"><id>https://www.fourdigits.nl/blog/opengraph-and-seo-support-for-plone-4</id><link href="https://www.fourdigits.nl/blog/opengraph-and-seo-support-for-plone-4" rel="alternate" type="text/html"/><title>OpenGraph and SEO support for Plone 4</title><summary>fourdigits.seo brings additional Publisher and Author data support and SEO overrides support in Plone 4.</summary><content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>We just released fourdigits.seo v1.0 to <a class="external-link" href="https://pypi.python.org/pypi/fourdigits.seo/" target="_self" title="fourdigits.seo on PyPI">https://pypi.python.org/pypi/fourdigits.seo/</a>.</p>
+<p>fourdigits.seo brings additional Publisher and Author data support and SEO overrides support in Plone 4.<br/>- The supported platforms for Publisher are Twitter Card, Open Graph and Google Plus.<br/>- The title and description of the login form, registration form and contact form can be overriden.<br/>- Favicon.ico and Apple Touch icons can be set.</p>
+<p>A quick feature run:</p>
+<h2>Site wide settings</h2>
+<h3>General / default:</h3>
+<ul>
+<li>Include site name in title (Include the site name in the title tag)</li>
+<li>Site name seperator (Separator used to separate the object title and the site name in the title tag)</li>
+<li>Expose Publication date (Expose publication date in the head)</li>
+<li>Login Form Title (Title for the login form)</li>
+<li>Login Form Description (Description for the homepage)</li>
+<li>Register Form Title (Title for the registration form)</li>
+<li>Register Form Description (Description for the registration form)</li>
+<li>Contact Info Title (Title for the contact info page)</li>
+<li>Contact Info Description (Description for the contact info page)</li>
+</ul>
+<p class="callout"><a class="external-link" href="https://www.fourdigits.nl/blog/ScreenShot20150619at15.14.41.png" target="_self" title=""><img alt="The default settings tab for fourdigits.seo" class="image-inline" src="https://www.fourdigits.nl/blog/ScreenShot20150619at15.14.41.png/@@images/bb276b83-9f3e-4ecb-b670-59612b95aca6.png" title="fourdigits.seo - site wide setting - default"/></a></p>
+<div/>
+<h3>Social</h3>
+<ul>
+<li>Publisher information for the major social media providers: Google Plus, Twitter Card and Open Graph.</li>
+<li>Google+ Publisher Page</li>
+<li>Expose Twitter Card</li>
+<li>Twitter Site Account</li>
+<li>Expose Open Graph</li>
+<li>Open Graph fallback image</li>
+<li>Expose Open Graph Author</li>
+</ul>
+<div><a class="external-link" href="https://www.fourdigits.nl/blog/ScreenShot20150619at15.14.46.png" target="_self" title=""><img alt="fourdigits.seo - global settings" class="image-inline" src="https://www.fourdigits.nl/blog/ScreenShot20150619at15.14.46.png/@@images/17b12ba3-2fc9-4b02-be11-8ed776eb55d4.png" title="fourdigits.seo - global settings"/></a></div>
+<h3>Icons:</h3>
+<ul>
+<li>Favicon url</li>
+<li>Touch icon iPhone url</li>
+<li>Touch icon iPhone Retina url</li>
+<li>Touch icon iPad url</li>
+<li>Touch icon iPad Retina url</li>
+</ul>
+<div><a class="external-link" href="https://www.fourdigits.nl/blog/ScreenShot20150619at15.14.50.png" target="_self" title=""><img alt="fourdigits.seo - global settings" class="image-inline" src="https://www.fourdigits.nl/blog/ScreenShot20150619at15.14.50.png/@@images/096a3bc7-6c2c-42a5-9aab-97be8616c3d0.png" title="fourdigits.seo - global settings"/></a></div>
+<h3>Indexing:</h3>
+<ul>
+<li>Index Login Form</li>
+<li>Index Register Form</li>
+<li>Index Contact Info</li>
+</ul>
+<div><a class="external-link" href="https://www.fourdigits.nl/blog/ScreenShot20150619at15.15.18.png" target="_self" title=""><img alt="fourdigits.seo - global settings" class="image-inline" src="https://www.fourdigits.nl/blog/ScreenShot20150619at15.15.18.png/@@images/01744a89-55d4-4321-8c5f-3ea83cf7803f.png" title="fourdigits.seo - global settings"/></a></div>
+<h2>Per object settings</h2>
+<ul>
+<li>Override meta title</li>
+<li>Override meta description</li>
+<li>No Index</li>
+<li>No Follow</li>
+<li>No Archive</li>
+<li>No Snippet</li>
+</ul>
+<div><a class="external-link" href="https://www.fourdigits.nl/blog/ScreenShot20150619at15.22.08.png" target="_self" title=""><img alt="fourdigits.seo - global settings" class="image-inline" src="https://www.fourdigits.nl/blog/ScreenShot20150619at15.22.08.png/@@images/ea07c963-352a-4fba-b88b-21f7ddcfe2bf.png" title="fourdigits.seo - global settings"/></a></div>
+<h2>Installation</h2>
+<ul>
+<li>Add 'fourdigits.seo' to the eggs section of your buildout.cfg.</li>
+<li>Install 'SEO' using the 'Add-ons' section in the Plone control panel.</li>
+<li>Enable the 'SEO' behaviour in the 'Dexterity Contect Types' in the Plone Control Panel.</li>
+</ul>
+<p>Note: the 'Site wide settings' are available without enabling the behavior.</p></div></content><rights>Copyright © 2005 - 2015 Four Digits</rights><updated planet:format="June 19, 2015 03:24 PM">2015-06-19T15:24:00Z</updated><author><name>Roel Bruggink</name></author><source><id>https://www.fourdigits.nl/blog</id><link href="https://www.fourdigits.nl/blog" rel="alternate" type="text/html"/><link href="https://www.fourdigits.nl/feeds/RSS" rel="self" type="application/rdf+xml"/><subtitle>Intelligente online oplossingen met het open source CMS Plone.</subtitle><title>Four Digits</title><updated planet:format="December 26, 2015 10:40 AM">2015-12-26T10:40:12Z</updated><planet:format>rss10</planet:format><planet:http_etag>&quot;||8724|nl|0|Sunburst Theme|&quot;</planet:http_etag><planet:nick>4d</planet:nick><planet:faceheight>85</planet:faceheight><planet:http_last_modified>Tue, 25 Nov 2014 08:20:44 GMT</planet:http_last_modified><planet:bozo>false</planet:bozo><planet:css-id>four-digits</planet:css-id><planet:items_per_page>60</planet:items_per_page><planet:face>4d.png</planet:face><planet:facewidth>85</planet:facewidth><planet:name>Four Digits</planet:name><planet:http_status>200</planet:http_status></source></entry>

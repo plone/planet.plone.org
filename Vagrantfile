@@ -20,5 +20,5 @@ Vagrant.configure("2") do |config|
         vb.customize ["modifyvm", :id, "--name", "planet" ]
     end
 
-    config.vm.provision "shell", path: "setup.sh"
+    config.vm.provision "shell", path: "scripts/setup.sh"
     end
