@@ -1,4 +1,5 @@
 theme
 .vagrant
-**/planet/planet-cache/
-/planet/public_html/*
+*.tmplc
+planet/planet-cache/
+planet/public_html/

@@ -17,4 +17,5 @@ planet:
 	@echo "${green}Fetching posts and updating planet${reset}"
 	vagrant ssh -c 'cd $(VENUS) && python source/planet.py planet.plone.org/planet.ini --verbose'
 
-
+clean:
+	vagrant ssh -c 'cd $(VENUS)/planet.plone.org && rm -rf planet-cache && rm -rf public_html'
