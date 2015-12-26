@@ -1,4 +1,4 @@
 theme
 .vagrant
-**/planet.plone.org/planet-cache/
-/planet.plone.org/public_html/*
+**/planet/planet-cache/
+/planet/public_html/*
