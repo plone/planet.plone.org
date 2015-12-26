@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
     config.vm.network "forwarded_port", guest: 80, host: 8080
     config.vm.hostname = "planet"
 
-    config.vm.synced_folder "planet.plone.org/", "/srv/venus/planet.plone.org"
+    config.vm.synced_folder "planet/", "/srv/venus/planet.plone.org"
 
     config.vm.provider "virtualbox" do |vb|
         vb.customize ["modifyvm", :id, "--ioapic", "on"  ]
@@ -20,5 +20,5 @@ Vagrant.configure("2") do |config|
         vb.customize ["modifyvm", :id, "--name", "planet" ]
     end
 
-    config.vm.provision "shell", path: "setup.sh"
+    config.vm.provision "shell", path: "scripts/setup.sh"
     end

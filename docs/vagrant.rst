@@ -22,7 +22,7 @@ Network
 Port 80 of the vagrant box is forwarded to port 8080 of your host
 
 
-Booting 
+Booting
 -------
 
 Navigate into the ``vagrant`` directory of planet.plone.org and *start* vagrant.
@@ -52,15 +52,19 @@ You can find planet.plone.org in ``/srv/venus/planet.plone.org``.
 
 For activation of the planet:
 
+
+.. code-block:: bash
+
+    $ make planet
+
+or login via ssh and do it *from hand*:
+
 .. code-block:: bash
 
     $ vagrant ssh
     $ cd /srv/venus
     $ python source/planet.py planet.plone.org/planet.ini --verbose
 
-.. todo::
-
-    Let the setup script do that
 
 
 Browse
