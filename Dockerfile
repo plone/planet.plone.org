@@ -18,3 +18,4 @@ RUN git clone https://github.com/rubys/venus.git source
 # add plone planet to /opt/venus/planet
 # change planet config to generate html and cache in /srv/planet and /srv/lanet-cache
 # add cron to run planet script every 10 minutes
+# check entrypoint
