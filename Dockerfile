@@ -20,6 +20,7 @@ RUN git clone https://github.com/rubys/venus.git source
 
 # Todo:
 # change planet config to generate html and cache in /srv/planet and /srv/planet-cache
+# check cache of dockerfile
 # add cron to run planet script every 10 minutes
 # check entrypoint
 # ensure we get logs
