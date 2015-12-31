@@ -6,16 +6,18 @@ RUN apk update && apk add \
 	git \
 	python \
 	libxslt \
-	&& adduser -G planet -g "Planet User" -r -s /bin/false -d /opt/venus planet \
+	&& adduser -g "Planet User" -D -s /bin/ash -h /opt/venus planet \
 	&& rm -rf /var/cache/apk/*
 
 USER planet
 WORKDIR /opt/venus
 
+COPY planet /opt/venus/planet
+
 RUN git clone https://github.com/rubys/venus.git source
 
+
 # Todo:
-# add plone planet to /opt/venus/planet
 # change planet config to generate html and cache in /srv/planet and /srv/lanet-cache
 # add cron to run planet script every 10 minutes
 # check entrypoint
