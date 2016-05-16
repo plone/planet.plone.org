@@ -26,7 +26,7 @@
 							<a href="http://plone.org" title="">Home</a>
 						</li>
 						<li id="portaltab-products" class="plain">
-							<a href="http://plone.org/products" title="Plone releases and available add-on products for Plone. Make sure you have Plone installed before downloading the add-ons — and make sure you are using add-ons that have been certified for use with your particular version.">Downloads</a>
+							<a href="https://plone.org/download" title="Plone releases and available add-on products for Plone. Make sure you have Plone installed before downloading the add-ons — and make sure you are using add-ons that have been certified for use with your particular version.">Downloads</a>
 						</li>
 						<li id="portaltab-documentation" class="plain">
 							<a href="http://plone.org/documentation" title="The primary source for Plone documentation.">Documentation</a>
