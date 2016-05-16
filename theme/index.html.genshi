@@ -29,7 +29,7 @@
 							<a href="https://plone.org/download" title="Plone releases and available add-on products for Plone. Make sure you have Plone installed before downloading the add-ons — and make sure you are using add-ons that have been certified for use with your particular version.">Downloads</a>
 						</li>
 						<li id="portaltab-documentation" class="plain">
-							<a href="http://plone.org/documentation" title="The primary source for Plone documentation.">Documentation</a>
+							<a href="http://docs.plone.org/" title="The primary source for Plone documentation.">Documentation</a>
 						</li>
 						<li id="portaltab-contribute" class="plain">
 							<a href="http://plone.org/contribute" title="Contains all developer-related material.">Get Involved</a>
