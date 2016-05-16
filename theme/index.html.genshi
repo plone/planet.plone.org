@@ -8,7 +8,7 @@
 			$feed.config.name
 		</title>
 		<link rel="alternate" type="application/rss+xml" href="http://feeds.plone.org/ploneblogs" title="Plone Blogs" />
-		<link rel="stylesheet" href="http://plone.org/plone.css" type="text/css" media="screen" charset="utf-8" />
+		<link rel="stylesheet" href="http://old.plone.org/plone.css" type="text/css" media="screen" charset="utf-8" />
 		<base href="http://plone.org/" />
 	</head>
 	<body id="planet-plone-index">
