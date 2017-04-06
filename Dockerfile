@@ -1,7 +1,9 @@
-FROM alpine:3.3
-MAINTAINER Plone Admins <admins@plone.org>
+FROM alpine:3.5
+LABEL maintainer "Sven <sven@testthedocs.org>"
 
-RUN apk update && apk add \
+ENV PIP_CACHE /root/.cache
+
+RUN apk --no-cache add \
 	ca-certificates \
 	git \
 	python \
@@ -19,8 +21,9 @@ RUN git clone https://github.com/rubys/venus.git source
 
 
 # Todo:
-# change planet config to generate html and cache in /srv/planet and /srv/planet-cache
-# check cache of dockerfile
-# add cron to run planet script every 10 minutes
-# check entrypoint
-# ensure we get logs
+# Add caddy as webserver
+# Change planet config to generate html and cache in /srv/planet and /srv/planet-cache
+# Check cache of dockerfile
+# Add cron to run planet script every 10 minutes
+# Check entrypoint
+
