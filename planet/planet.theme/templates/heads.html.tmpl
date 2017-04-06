@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<TMPL_INCLUDE head.tmpl>
+  <body>
+    <TMPL_INCLUDE masthead.tmpl>
+
+    <div class="bodycontent">
+      <div class="container p-t-3">
+        <h2>Blog list for <TMPL_VAR title></h2>
+        <div>
+          This planet aggregates feeds from <span id="blogcount"></span> different sources.
+        </div>
+        <div class="row">
+        <TMPL_LOOP Channels>
+          <div class="col-xl-3 col-lg-4 col-md-6">
+
+          <div class="card text-xs-center">
+              <div class="card-block">
+                  <div class="headsframe"><img src="<TMPL_VAR face ESCAPE="HTML">" /></div>
+                    <a href="<TMPL_VAR link ESCAPE="HTML">" title="<TMPL_VAR title ESCAPE="HTML">">
+                      <TMPL_VAR name ESCAPE="HTML">
+                    </a>
+              </div>
+          </div>
+        </div>
+
+
+        </TMPL_LOOP>
+                </div>
+      </div>
+    </div>
+    <TMPL_INCLUDE footer.tmpl>
+    <TMPL_INCLUDE scripts.tmpl>
+
+</body>
+</html>

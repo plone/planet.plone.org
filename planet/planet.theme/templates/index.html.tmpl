@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<TMPL_INCLUDE head.tmpl>
+  <body>
+    <TMPL_INCLUDE masthead.tmpl>
+
+    <div class="bodycontent">
+      <div class="container p-t-2">
+        <div>
+          <h2 class="p-b-2"><TMPL_VAR title>
+            <div class="btn-group pull-xs-right" role="group" aria-label="Button group with nested dropdown">
+              <a class="btn btn-sm btn-secondary" href="heads.html">Blog List</a>
+
+              <div class="btn-group" role="group">
+                <button id="btnGroup-feeds" type="button" class="btn btn-sm btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Feeds
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroup-feeds">
+                  <a class="dropdown-item" href="rss10.xml">RSS 1.0</a>
+                  <a class="dropdown-item" href="rss20.xml">RSS 2.0</a>
+                  <a class="dropdown-item" href="atom.xml">Atom 1.0</a>
+                  <a class="dropdown-item" href="foafroll.xml">FOAF blogroll</a>
+                </div>
+              </div>
+            </div>
+          </h2>
+
+        </div>
+        <TMPL_LOOP Items>
+          <div class="row m-b-3">
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 text-sm-center">
+              <TMPL_IF channel_face>
+                  <img class="hackergotchi" src="<TMPL_VAR channel_face ESCAPE="HTML">" <TMPL_IF channel_facewidth>width="<TMPL_VAR channel_facewidth>" </TMPL_IF><TMPL_IF channel_faceheight>height="<TMPL_VAR channel_faceheight>" </TMPL_IF>alt="">
+              </TMPL_IF>
+            </div>
+            <div class="col-xl-10 col-lg-9 col-md-8 col-sm-8">
+              <div class="blog-entry <TMPL_VAR channel_name>">
+                  <div class="blog-entry-post card">
+                      <div class="card-block">
+                        <div class="blog-entry-header m-b-2">
+                          <h2>
+                            <a href="<TMPL_VAR link>">
+                            <TMPL_IF title><TMPL_VAR title><TMPL_ELSE>Untitled Post</TMPL_IF>
+                            </a>
+                          </h2>
+                            <small>Posted by <a href="<TMPL_VAR channel_link ESCAPE="HTML">"><TMPL_VAR channel_name></a>
+                            <span class="fas-account">(<img src="https://fedoraproject.org/w/uploads/a/ac/Infra-icon_fas.png" alt="Fedora Account System Username" name="Fedora Account System Username"><a href="https://admin.fedoraproject.org/accounts/user/view/<TMPL_VAR channel_fasname ESCAPE="HTML">"><TMPL_VAR channel_fasname ESCAPE="HTML"></a>)</span>
+                            on <a href="<TMPL_VAR link>"><TMPL_VAR date></a>
+                            </small>
+                        </div>
+                        <div class="blog-entry-content-container">
+                            <div class="blog-entry-content"><TMPL_VAR content></div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          </TMPL_LOOP>
+        </div>
+      </div>
+      <TMPL_INCLUDE footer.tmpl>
+
+
+    <TMPL_INCLUDE scripts.tmpl>
+
+
+</body>
+</html>
