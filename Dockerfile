@@ -9,7 +9,7 @@ RUN apk --no-cache add \
 	python \
 	libxslt \
 	&& adduser -g "Planet User" -D -s /bin/ash -h /opt/venus planet \
-	&& rm -rf /var/cache/apk/*
+	&& rm -rf $PIP_CACHE
 
 WORKDIR /opt/venus
 COPY planet planet
