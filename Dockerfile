@@ -8,10 +8,10 @@ RUN apk --no-cache add \
 	git \
 	python \
 	libxslt \
-	&& adduser -g "Planet User" -D -s /bin/ash -h /opt/venus planet \
+	&& adduser -g "Planet User" -D -s /bin/ash -h /srv/venus planet \
 	&& rm -rf $PIP_CACHE
 
-WORKDIR /opt/venus
+WORKDIR /srv/venus
 COPY planet planet
 RUN chown -R planet:planet planet
 
