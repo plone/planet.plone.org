@@ -1,7 +1,7 @@
 To add your feed
 ================
 
-Please use dev.plone.org issue tracker with "Planet" component.
+Please make your request using the issue tracker at https://github.com/plone/planet.plone.org/issues
 
  ♀ Planet Venus for Plone
 ==========================
@@ -17,9 +17,10 @@ Admin instructions
 Questions, Comments, Concerns
 =============================
 
-For any issues regarding Planet Venus for Plone and the
-http://planet.plone.org/ service, please contact the Plone AI Team at
-https://dev.plone.org using "Planet" as the issue tracker component.
+Please file issues regarding Planet Venus for Plone and the
+http://planet.plone.org/ service at 
+https://github.com/plone/planet.plone.org/issues or contact the Plone AI Team at
+admins@plone.org.
 
 .. Authors:
 
