@@ -15,15 +15,15 @@
 		<div id="outer-wrapper">
 			<div id="inner-wrapper">
 				<div id="nav">
-					<form id="search" name="searchform" action="http://plone.org/search">
-						<input id="search-site" name="SearchableText" type="search" title="Search this site…" accesskey="4" class="inputLabel" size="15" />
+					<form id="search" name="searchform" action="https://plone.org/search">
+						<input id="search-site" name="SearchableText" type="search" title="Search plone.org…" accesskey="4" class="inputLabel" size="15" />
 					</form>
 					<div id="user">
 						<a href="https://plone.org/login">Log in</a>
 					</div>
 					<ul id="main-nav" class="navigation">
 						<li id="portaltab-index_html" class="plain">
-							<a href="http://plone.org" title="">Home</a>
+							<a href="https://plone.org" title="">Home</a>
 						</li>
 						<li id="portaltab-products" class="plain">
 							<a href="https://plone.org/download" title="Plone releases and available add-on products for Plone. Make sure you have Plone installed before downloading the add-ons — and make sure you are using add-ons that have been certified for use with your particular version.">Downloads</a>
