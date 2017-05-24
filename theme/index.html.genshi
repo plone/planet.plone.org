@@ -19,7 +19,7 @@
 						<input id="search-site" name="SearchableText" type="search" title="Search this site…" accesskey="4" class="inputLabel" size="15" />
 					</form>
 					<div id="user">
-						<a href="http://plone.org/login">Log in</a>
+						<a href="https://plone.org/login">Log in</a>
 					</div>
 					<ul id="main-nav" class="navigation">
 						<li id="portaltab-index_html" class="plain">
@@ -29,10 +29,10 @@
 							<a href="https://plone.org/download" title="Plone releases and available add-on products for Plone. Make sure you have Plone installed before downloading the add-ons — and make sure you are using add-ons that have been certified for use with your particular version.">Downloads</a>
 						</li>
 						<li id="portaltab-documentation" class="plain">
-							<a href="http://docs.plone.org/" title="The primary source for Plone documentation.">Documentation</a>
+							<a href="https://docs.plone.org/" title="The primary source for Plone documentation.">Documentation</a>
 						</li>
 						<li id="portaltab-contribute" class="plain">
-							<a href="https://plone.org/community" title="Contains all developer-related material.">Get Involved</a>
+							<a href="https://community.plone.org" title="Plone Community.">Get Involved</a>
 						</li>
 						<li id="portaltab-foundation" class="plain">
 							<a href="https://plone.org/foundation" title="The Plone Foundation exists to further the development, marketing, and legal affairs of Plone and the Plone community.">Plone Foundation</a>
@@ -99,13 +99,13 @@
 												</dt>
 												<dd class="portletItem">
 													<p>Last updated: $feed.updated</p>
-													<p>To subscribe to this feed in the reader of your choice, 
+													<p>To subscribe to this feed in the reader of your choice,
 														<a href="http://feeds.plone.org/ploneblogs">click here</a>.
 													</p>
 													<p>To have your blog added to
 														Planet Plone, please add your blog details to the
-														<a href="https://github.com/plone/planet.plone.org/blob/master/feeds.cfg">feed list</a> (press Edit) and then open a Pull Request on Github. Please filter posts using plone
-														tag for the feed to have relevant entries only. If you cannot edit the file on Github, 
+														<a href="https://github.com/plone/planet.plone.org/blob/master/feeds.cfg">feed list</a> (press Edit) and then open a Pull Request on GitHub. Please filter posts using Plone
+														tag for the feed to have relevant entries only. If you cannot edit the file on GitHub,
 														open the issue on <a href="https://github.com/plone/planet.plone.org/issues">planet.plone.org issue tracker.</a>
 													</p>
 												</dd>
