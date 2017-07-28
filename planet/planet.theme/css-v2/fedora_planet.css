@@ -34,3 +34,86 @@ text-align: center;
 width: inherit !important;
 height: inherit !important;
 }
+
+/*
+ * Start Bootstrap - Logo Nav (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+}
+
+.navbar-fixed-top .nav {
+    padding: 15px 0;
+}
+
+.navbar-fixed-top .navbar-brand {
+    padding: 0 15px;
+}
+
+@media(min-width:768px) {
+    body {
+        padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+}
+
+.topbar{
+font-size: 11px;
+font-weight: 600;
+text-transform: uppercase;
+background: #1f1238;
+width: 100%;
+overflow: hidden;
+border-bottom: 1px solid black;
+}          
+.topcontainer{
+margin-right: auto;
+margin-left: auto;
+padding-left: 15px;
+padding-right: 15px
+}
+@media (min-width: 968px){
+.topcontainer{
+  width: 750px;
+  }
+}
+@media (min-width: 992px){
+.topcontainer{
+  width: 970px;
+  }
+}
+@media (min-width: 1200px){
+.topcontainer{
+  width: 1170px;
+  }
+}
+.topbar ul{
+  margin-right: 2.5em;
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.topbar ul li{
+  float: left;
+}
+.topbar a{
+color: #e5e5e5;
+text-decoration: none;
+padding: 7px 8px 5px 8px;
+line-height: 11px;
+display: inline-block;
+font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-size: 11px;
+font-weight: 600;
+}
+.topbar a:hover{
+color: #fff;
+background: #2a184b;
+}

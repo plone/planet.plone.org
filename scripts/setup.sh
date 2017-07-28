@@ -26,7 +26,7 @@ sudo apt-get install -y nginx
 git clone https://github.com/rubys/venus.git /srv/venus/source
 
 # Set permissions for vargrant
-chown -R vagrant:vagrant /srv/venus
+chown -R ubuntu:ubuntu /srv/venus
 
 # Setup nginx
 cat > /etc/nginx/conf.d/planet.plone.org.conf << "EOF"
