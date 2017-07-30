@@ -1,0 +1,2 @@
+crond: tini /usr/sbin/crond -f -L -
+caddy: tini /usr/bin/caddy

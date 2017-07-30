@@ -1,6 +1,8 @@
 theme
 .vagrant
 *.tmplc
+plone_theme/templates/*.tmplc
+plone_theme/templates/inc/*.tmplc
 planet/planet-cache/
 planet/public_html/
 ubuntu-xenial-16.04-cloudimg-console.log
