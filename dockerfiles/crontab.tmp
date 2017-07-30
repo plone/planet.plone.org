@@ -1,3 +1,3 @@
 # This is a cron to update planet.plone every hour
 SHELL=/bin/bash
-0 * * * * planet python /srv/venus/source/planet.py /srv/planet/planet.ini >> /var/log/cron.log 2>&1
+0 * * * * planet python /srv/venus/source/planet.py /srv/planet.plone.org/planet.ini >> /var/log/cron.log 2>&1
