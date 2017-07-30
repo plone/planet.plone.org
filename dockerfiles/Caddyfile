@@ -1,13 +1,8 @@
-planet.plone.org:80 {
-    0.0.0.0
+http://planet.plone.org {
     log stdout
     errors stdout
     gzip
     tls no
+    root /srv/venus/public_html
 }
 
-header / {
-    Cache-Control "max-age=86400"
-}
-
-root /srv/venus/public_html

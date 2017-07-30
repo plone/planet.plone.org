@@ -17,6 +17,7 @@ RUN builddeps=' \
 	libxslt \
         bash \
         py-pip \
+        vim \
     && mkdir -p /srv/venus \
     && adduser -g "Planet User" -D -s /bin/bash -h /srv/venus planet \
     && git clone https://github.com/rubys/venus.git /srv/venus/source \
@@ -28,6 +29,7 @@ RUN builddeps=' \
 
 COPY dockerfiles/Caddyfile /etc/Caddyfile
 COPY dockerfiles/crontab.tmp /etc/cron.d/planet.cron
+COPY dockerfiles/Procfile /srv/Procfile
 RUN crontab /etc/cron.d/planet.cron
 
 WORKDIR /srv/venus
@@ -35,7 +37,7 @@ WORKDIR /srv/venus
 COPY planet planet.plone.org
 RUN chown -R planet:planet planet.plone.org
 
-USER planet
+#USER planet
 ENTRYPOINT ["/bin/bash"]
 
 # Todo:

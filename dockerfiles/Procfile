@@ -1,2 +1,2 @@
-crond: tini /usr/sbin/crond -f -L -
-caddy: tini /usr/bin/caddy
+crond: /sbin/tini -s /usr/sbin/crond -f
+webserver: /sbin/tini -s /usr/bin/caddy -conf /etc/Caddyfile
