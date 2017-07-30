@@ -1,0 +1,10 @@
+CHANGES.rst
+docs
+scripts
+Vagrantfile
+Makefile
+README.rst
+ubuntu-xenial-16.04-cloudimg-console.log
+.git
+.gitignore
+

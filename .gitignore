@@ -3,3 +3,4 @@ theme
 *.tmplc
 planet/planet-cache/
 planet/public_html/
+ubuntu-xenial-16.04-cloudimg-console.log
