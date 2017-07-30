@@ -37,6 +37,7 @@ WORKDIR /srv/venus
 COPY planet planet.plone.org
 RUN chown -R planet:planet planet.plone.org
 
+EXPOSE 2015:2015
 #USER planet
 ENTRYPOINT ["/bin/bash"]
 

@@ -3,6 +3,6 @@ http://planet.plone.org {
     errors stdout
     gzip
     tls no
-    root /srv/venus/public_html
+    root /srv/venus/planet.plone.org/public_html
 }
 
