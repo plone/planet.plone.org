@@ -1,0 +1,12 @@
+planet.plone.org:443 {
+    0.0.0.0
+    log stdout
+    errors stdout
+    gzip
+}
+
+header / {
+    Cache-Control "max-age=86400"
+}
+
+root /srv/public_html

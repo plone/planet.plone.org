@@ -19,6 +19,7 @@ RUN builddeps=' \
     && apk del --purge $builddeps \
     && rm -rf $PIP_CACHE
 
+COPY Caddyfile /etc/Caddyfile
 WORKDIR /srv/venus
 COPY planet planet
 RUN chown -R planet:planet planet
@@ -33,4 +34,4 @@ RUN git clone https://github.com/rubys/venus.git source
 # Check cache of dockerfile
 # Add cron to run planet script every 10 minutes
 # Check entrypoint
-
+# Add Caddyfile
