@@ -1,0 +1,14 @@
+sudo: required
+
+branches:
+  only:
+  - svx
+
+services:
+  - docker
+
+before_install:
+  - docker pull testthedocs/ttd-coala
+
+script:
+ - docker run -it --rm -v "${PWD}":/srv testthedocs/ttd-coala
