@@ -1,7 +1,8 @@
 planet.plone.org
 ================
 
-Planet Venus, normally served at http://planet.plone.org/.
+
+Planet Venus, served at https://planet.plone.org/.
 
 Features
 --------
