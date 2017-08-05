@@ -1,0 +1,12 @@
+http://planet.plone.org {
+    log stdout
+    errors stdout
+    gzip
+    tls no
+    #root /srv/public_html
+    #proxy / localhost:2015 {
+    proxy / planet:2015 {
+    transparent
+    }
+}
+

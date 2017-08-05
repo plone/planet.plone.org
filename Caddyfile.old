@@ -1,0 +1,8 @@
+http://planet.plone.org {
+    log stdout
+    errors stdout
+    gzip
+    tls no
+    root /srv/index.html
+}
+
