@@ -1,8 +1,0 @@
-http://planet.plone.org:2015 {
-    log stdout
-    errors stdout
-    gzip
-    tls no
-    root /srv/venus/planet.plone.org/public_html
-}
-

@@ -1,26 +1,45 @@
-FROM testthedocs/ttd-caddy:latest
+#
+# Dockerfile for Caddy https://caddyserver.com/
+# Addopted from https://github.com/abiosoft/caddy-docker
+#
+FROM alpine:latest
+
+ARG container_version=0.0.0.0
+
 LABEL maintainer "Sven <sven@testthedocs.org>" \
-    org.label-schema.vendor = "Plone Community" \
-    description="Planet Plone"
+    org.label-schema.vendor = "TestTheDocs" \
+    caddy_version="0.10.6" \
+    architecture="amd64" \
+    build_version="$container_version"
 
 ENV PIP_CACHE /root/.cache
 
 RUN builddeps=' \
-    git \
-    ' \
-    && apk --no-cache add \
-	ca-certificates \
-	$builddeps \
+        tar \
+        curl \
+        git \
+        '\
+        && apk --no-cache add \
+        $builddeps \
+        ca-certificates \
         su-exec \
-	python2 \
+        python2 \
         dcron \
-	libxslt \
+        libxslt \
         bash \
         py-pip \
+        tini \
+        openssh-client \
     && mkdir -p /srv/venus \
     && git clone https://github.com/rubys/venus.git /srv/venus/source \
     && pip2 install --upgrade pip \
     && pip2 install honcho \
+	&& curl --silent --show-error --fail --location \
+		--header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" -o - \
+		"https://caddyserver.com/download/linux/amd64?plugins=http.minify" \
+	| tar --no-same-owner -C /usr/bin/ -xz caddy \
+	&& chmod 0755 /usr/bin/caddy \
+    && /usr/bin/caddy -version \
     && apk del --purge $builddeps \
     && rm -rf $PIP_CACHE
 
@@ -33,10 +52,7 @@ RUN crontab /etc/cron.d/planet.cron
 WORKDIR /srv/venus
 COPY planet planet.plone.org
 
-EXPOSE 2015
+#EXPOSE 2015
+
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 #ENTRYPOINT ["/bin/bash"]
-
-# Todo:
-# Cleanup
-# Change setup to run as user

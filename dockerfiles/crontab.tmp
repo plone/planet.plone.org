@@ -1,3 +1,5 @@
 # This is a cron to update planet.plone every hour
-#0 * * * * planet python /srv/venus/source/planet.py /srv/planet.plone.org/planet.ini
-*/5 * * * * python2.7 /srv/venus/source/planet.py /srv/venus/planet.plone.org/planet.ini
+# Check once a hour for feed updates
+0 * * * * python2.7 /srv/venus/source/planet.py /srv/venus/planet.plone.org/planet.ini
+# Check every 5 minutes for feed updates
+#*/5 * * * * python2.7 /srv/venus/source/planet.py /srv/venus/planet.plone.org/planet.ini
