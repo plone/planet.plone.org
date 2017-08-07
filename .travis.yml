@@ -8,6 +8,7 @@ services:
   - docker
 
 before_install:
+  - ./scripts/changelog.sh
   - docker pull testthedocs/ttd-coala
 
 script:
