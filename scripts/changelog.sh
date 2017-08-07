@@ -8,10 +8,11 @@ CHECK_FILE=CHANGES.md
 
 if [ -f "$CHECK_FILE" ]
 then
-    if git diff --cached --name-only | if grep --quiet "$CHECK_FILE"
+    git diff --cached --name-only | if grep --quiet "$CHECK_FILE"
     then
-        echo "No Changes"
+        echo "Please update the changelog file"
         exit 1
+    fi
 else
     echo the file does not exist
     exit 1
