@@ -1,7 +1,7 @@
 version: "2"
 services:
   planet:
-    image: planet
+    image: plone/planet
     networks:
     - plone-net
     expose:
