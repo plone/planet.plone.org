@@ -1,4 +1,6 @@
 #!/bin/bash
+# if any command inside script returns error, exit and return that error 
+set -e
 
 # This file does:
 # Checking for a file called CHANGES.md
@@ -6,15 +8,18 @@
 
 CHECK_FILE=CHANGES.md
 
-if [ -f "$CHECK_FILE" ]
+# If there is no file called CHANGES.md let the test fail.
+if [ ! -f "$CHECK_FILE" ]
 then
-    git diff --cached --name-only | if grep --quiet "$CHECK_FILE"
-    then
-        echo "Please update the changelog file"
-        exit 1
-    fi
-else
-    echo the file does not exist
+    echo "Can't find CHANHES.md, please check"
     exit 1
+else
+    if git diff HEAD~ --name-only|grep --quiet $CHECK_FILE; then
+        : # Do nothing
+    else
+    echo "Please update the changelog file"
+    echo "Failed!" && exit 1
+    fi
 fi
 exit 0
+
