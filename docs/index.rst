@@ -2,7 +2,7 @@
 planet.plone.org
 ================
 
-...tbc
+All about planet.plone.org
 
 .. toctree::
    :maxdepth: 2
