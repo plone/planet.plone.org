@@ -1,15 +1,11 @@
 version: "2"
 services:
   planet:
-    image: pp1
+    image: planet
     networks:
     - plone-net
-    #ports:
-    #- 2015:2015
     expose:
     - 2015
-    #depends_on:
-    #- caddy
 
   caddy:
     image: testthedocs/ttd-caddy

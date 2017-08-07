@@ -1,33 +1,8 @@
 version: "2"
 services:
   planet:
-    image: pp1
-    #networks:
-    #- plone-net
-    #ports:
-    #- 2015:2015
+    image: plone/planet
     expose:
-    #- 8080
     - 2015
-    #- 80
-    #depends_on:
-    #- caddy
 
-#   caddy:
-#     image: testthedocs/ttd-caddy
-#     volumes:
-#     - ./Caddyfile:/etc/Caddyfile
-#     ports:
-#     - 2015:2015
-#     - 80:80
-#     depends_on:
-#     - planet
-#     #links:
-#     #- plone
-#     networks:
-#     - plone-net
-
-# networks:
-#   plone-net:
-#     driver: bridge
 
