@@ -6,7 +6,7 @@ set -e
 # Checking for a file called CHANGES.md
 # Checks is that file got updated with the latest commit
 
-CHECK_FILE=CHANGES.md
+CHECK_FILE=CHANGES.rst
 
 # If there is no file called CHANGES.md let the test fail.
 if [ ! -f "$CHECK_FILE" ]

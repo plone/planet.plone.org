@@ -5,6 +5,7 @@ Changelog
 0.0.1
 =====
 
+- Adjust scripts/changelog.sh to check for CHANGES.rst [svx]
 - Add CHANGES.rst to checks [svx]
 - Rename CHANGES.md to CHANGES.rst [svx]
 - Add travis check for Dockerfile QA [svx]
