@@ -6,8 +6,8 @@ FROM alpine:latest
 
 ARG container_version=0.0.0.0
 
-LABEL maintainer "Sven <sven@testthedocs.org>" \
-    org.label-schema.vendor = "TestTheDocs" \
+LABEL maintainer="Plone Community" \
+    org.label-schema.vendor="Plone Community" \
     caddy_version="0.10.6" \
     architecture="amd64" \
     build_version="$container_version"

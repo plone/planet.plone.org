@@ -10,6 +10,9 @@ services:
 before_install:
   - ./scripts/changelog.sh
   - docker pull testthedocs/ttd-coala
+  - docker pull redcoolbeans/dockerlint
 
 script:
- - docker run -it --rm -v "${PWD}":/srv testthedocs/ttd-coala
+  - docker run -it --rm -v "${PWD}":/srv testthedocs/ttd-coala
+  - docker run -it --rm -v "${PWD}/dockerfiles/Dockerfile":/Dockerfile:ro redcoolbeans/dockerlint
+
