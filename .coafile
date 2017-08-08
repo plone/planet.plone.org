@@ -1,7 +1,7 @@
 [all]
 bears = LineLengthBear, SpaceConsistencyBear, reSTLintBear, WriteGoodLintBear
 use_spaces = True
-files = README.rst
+files = README.rst, CHANGES.rst
 max_line_length = 150
 autoapply=false
 allow_so_beginning = False
