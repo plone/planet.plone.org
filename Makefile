@@ -8,7 +8,7 @@ yellow=`tput setaf 3`
 reset=`tput sgr0`
 
 # Name
-NAME = plone/panet
+NAME = plone/planet
 # Get version form VERSION
 VERSION := $(shell cat VERSION)
 DOCKER := $(bash docker)
