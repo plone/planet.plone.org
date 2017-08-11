@@ -1,3 +1,6 @@
+**Old setup, do not use !**
+
+
 planet.plone.org
 ================
 
