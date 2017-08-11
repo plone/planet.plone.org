@@ -6,6 +6,8 @@ Changelog
 =====
 
 - Fix container name, it is planet NOT panet [svx]
+- Make svx branch new master branch [svx]
+- WIP: docs and faq [svx]
 
 0.0.1
 =====
