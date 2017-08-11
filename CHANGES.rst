@@ -2,6 +2,11 @@
 Changelog
 =========
 
+0.0.3
+=====
+
+- Disable exposed ports on default
+
 0.0.2
 =====
 

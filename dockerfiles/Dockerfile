@@ -52,7 +52,7 @@ RUN crontab /etc/cron.d/planet.cron
 WORKDIR /srv/venus
 COPY planet planet.plone.org
 
-EXPOSE 80 443 2015
+#EXPOSE 80 443 2015
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 #ENTRYPOINT ["/bin/bash"]

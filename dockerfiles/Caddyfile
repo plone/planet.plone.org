@@ -2,7 +2,7 @@
     log stdout
     errors stdout
     gzip
-    tls off
+    #tls off
     root /srv/venus/planet.plone.org/public_html
 }
 
