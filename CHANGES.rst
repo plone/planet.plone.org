@@ -2,6 +2,11 @@
 Changelog
 =========
 
+0.0.2
+=====
+
+- Fix container name, it is planet NOT panet [svx]
+
 0.0.1
 =====
 
