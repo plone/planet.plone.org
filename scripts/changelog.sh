@@ -11,7 +11,7 @@ CHECK_FILE=CHANGES.rst
 # If there is no file called CHANGES.md let the test fail.
 if [ ! -f "$CHECK_FILE" ]
 then
-    echo "Can't find CHANGES.md, please check"
+    echo "Can't find CHANGES.rst, please check"
     exit 1
 else
     if git diff HEAD~ --name-only|grep --quiet $CHECK_FILE; then

@@ -5,7 +5,8 @@ Changelog
 0.0.3
 =====
 
-- Disable exposed ports on default
+- Disable exposed ports on default [svx]
+- Fix typo in test [svx]
 
 0.0.2
 =====
