@@ -7,6 +7,7 @@ Changelog
 
 - Disable exposed ports on default [svx]
 - Fix typo in test [svx]
+- Restored entry for my "line 34" blog [reinhardt]
 
 0.0.2
 =====
