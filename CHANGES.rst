@@ -2,6 +2,11 @@
 Changelog
 =========
 
+unreleased
+==========
+
+- Fix Caddy download url in Dockerfile [atsoukka]
+
 0.0.3
 =====
 
