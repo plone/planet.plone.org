@@ -8,6 +8,7 @@ Changelog
 - Disable exposed ports on default [svx]
 - Fix typo in test [svx]
 - Restored entry for my "line 34" blog [reinhardt]
+- Chaged my blog protocol from http to https [datakurre]
 
 0.0.2
 =====
