@@ -6,6 +6,7 @@ unreleased
 ==========
 
 - Fix Caddy download url in Dockerfile [atsoukka]
+- Refactor builddeps in Dockerfile to please linter [datakurre]
 
 0.0.3
 =====
@@ -13,8 +14,6 @@ unreleased
 - Disable exposed ports on default [svx]
 - Fix typo in test [svx]
 - Restored entry for my "line 34" blog [reinhardt]
-- Change my blog protocol from http to https [datakurre]
-- Refactor builddeps in Dockerfile to please linter [datakurre]
 
 0.0.2
 =====
