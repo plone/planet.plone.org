@@ -14,13 +14,9 @@ LABEL maintainer="Plone Community" \
 
 ENV PIP_CACHE /root/.cache
 
-RUN builddeps=' \
-        tar \
-        curl \
-        git \
-        '\
-        && apk --no-cache add \
-        $builddeps \
+ENV BUILDDEPS tar curl git
+RUN apk --no-cache add \
+        $BUILDDEPS \
         ca-certificates \
         su-exec \
         python2 \
@@ -40,7 +36,7 @@ RUN builddeps=' \
 	| tar --no-same-owner -C /usr/bin/ -xz caddy \
 	&& chmod 0755 /usr/bin/caddy \
     && /usr/bin/caddy -version \
-    && apk del --purge $builddeps \
+    && apk del --purge $BUILDDEPS \
     && rm -rf $PIP_CACHE
 
 COPY dockerfiles/Caddyfile /etc/Caddyfile
