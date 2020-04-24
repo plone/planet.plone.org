@@ -7,6 +7,7 @@ unreleased
 
 - Fix Caddy download url in Dockerfile [atsoukka]
 - Refactor builddeps in Dockerfile to please linter [datakurre]
+- Updated feed URL for line34 [reinhardt]
 
 0.0.3
 =====
